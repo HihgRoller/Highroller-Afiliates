@@ -12,47 +12,88 @@
             padding: 0;
             background-color: #121212;
             color: #fff;
-            text-align: center;
         }
         header {
-            background: #ffcc00;
-            color: #121212;
-            padding: 20px;
-            font-size: 24px;
+            background: url('https://source.unsplash.com/1600x900/?casino') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-size: 40px;
             font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+        nav {
+            background: #000;
+            padding: 15px;
+            text-align: center;
         }
         nav ul {
             list-style: none;
             padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
         }
         nav ul li {
-            display: inline;
-            margin: 0 15px;
+            margin: 0 20px;
         }
         nav ul li a {
-            color: #fff;
+            color: #ffcc00;
             text-decoration: none;
             font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
         }
-        section {
+        nav ul li a:hover {
+            color: #ff6600;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
             padding: 50px 20px;
+            text-align: center;
+        }
+        .section {
+            background: #222;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         .cta-button {
-            background: #ffcc00;
+            background: linear-gradient(90deg, #ffcc00, #ff9900);
             color: #121212;
             padding: 15px 30px;
             font-size: 18px;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
             transition: 0.3s;
+            font-weight: bold;
         }
         .cta-button:hover {
-            background: #e6b800;
+            background: linear-gradient(90deg, #ff9900, #ff6600);
+            transform: scale(1.05);
+        }
+        .partners {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .partners img {
+            width: 150px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         footer {
-            background: #222;
+            background: #000;
             padding: 20px;
+            text-align: center;
+            color: #ffcc00;
             margin-top: 30px;
         }
     </style>
@@ -71,34 +112,40 @@
         </ul>
     </nav>
     
-    <section id="sobre">
-        <h2>Sobre Nós</h2>
-        <p>O HighRoller Affiliates oferece as melhores oportunidades para afiliados de casinos e apostas.</p>
-    </section>
-    
-    <section id="planos">
-        <h2>Planos de Comissão</h2>
-        <p>Ganhe até <strong>60%</strong> em RevShare ou até <strong>250€</strong> de CPA fixo!</p>
-        <button class="cta-button">Junte-se Agora</button>
-    </section>
-    
-    <section id="marcas">
-        <h2>Marcas Parceiras</h2>
-        <p>Trabalhamos com os melhores casinos e casas de apostas do mercado.</p>
-    </section>
-    
-    <section id="suporte">
-        <h2>Suporte</h2>
-        <p>Nosso suporte está disponível <strong>24/7</strong> para auxiliar você!</p>
-        <button class="cta-button">Fale Conosco</button>
-    </section>
-    
-    <section id="afiliados">
-        <h2>Área de Afiliados</h2>
-        <p>Entre agora para acessar sua conta e maximizar seus ganhos!</p>
-        <button class="cta-button">Entrar</button>
-        <button class="cta-button">Registrar-se</button>
-    </section>
+    <div class="container">
+        <div id="sobre" class="section">
+            <h2>Sobre Nós</h2>
+            <p>O HighRoller Affiliates oferece as melhores oportunidades para afiliados de casinos e apostas.</p>
+        </div>
+        
+        <div id="planos" class="section">
+            <h2>Planos de Comissão</h2>
+            <p>Ganhe até <strong>60%</strong> em RevShare ou até <strong>250€</strong> de CPA fixo!</p>
+            <button class="cta-button">Junte-se Agora</button>
+        </div>
+        
+        <div id="marcas" class="section">
+            <h2>Marcas Parceiras</h2>
+            <div class="partners">
+                <img src="https://source.unsplash.com/200x100/?casino1" alt="Parceiro 1">
+                <img src="https://source.unsplash.com/200x100/?casino2" alt="Parceiro 2">
+                <img src="https://source.unsplash.com/200x100/?casino3" alt="Parceiro 3">
+            </div>
+        </div>
+        
+        <div id="suporte" class="section">
+            <h2>Suporte</h2>
+            <p>Nosso suporte está disponível <strong>24/7</strong> para auxiliar você!</p>
+            <button class="cta-button">Fale Conosco</button>
+        </div>
+        
+        <div id="afiliados" class="section">
+            <h2>Área de Afiliados</h2>
+            <p>Entre agora para acessar sua conta e maximizar seus ganhos!</p>
+            <button class="cta-button">Entrar</button>
+            <button class="cta-button">Registrar-se</button>
+        </div>
+    </div>
     
     <footer>
         &copy; 2025 HighRoller Affiliates. Todos os direitos reservados.
